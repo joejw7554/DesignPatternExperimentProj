@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class BulletPoolManager : MonoBehaviour
 {
@@ -45,11 +44,11 @@ public class BulletPoolManager : MonoBehaviour
     public void ReturnBullet (GameObject bullet)
     {
 
-        Debug.Log("Ç®¿¡ ¹Ý³³µÊ");
+        bullet.SetActive(false);
         bullet.transform.position = Vector3.zero;
         bullet.transform.rotation = Quaternion.identity;
+        Debug.Log("Ç®¿¡ ¹Ý³³µÊ");
 
-        bullet.SetActive(false);
 
     }
 
