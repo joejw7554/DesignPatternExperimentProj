@@ -16,10 +16,16 @@ public class Bullet : MonoBehaviour
     {
         yield return new WaitForSeconds(lifetime);
         BulletPoolManager.Instance.ReturnBullet(gameObject);
+        
     }
 
     void Update()
     {
         transform.Translate(Vector3.forward * 10 * Time.deltaTime);
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }

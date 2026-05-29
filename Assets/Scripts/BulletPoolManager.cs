@@ -1,8 +1,6 @@
-using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
-using System;
-using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BulletPoolManager : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class BulletPoolManager : MonoBehaviour
 
 
 
-    List<GameObject> ObjectPool = new List<GameObject>();
+    private List<GameObject> ObjectPool = new List<GameObject>();
 
     [SerializeField]
     GameObject bulletPrefab;
@@ -48,6 +46,9 @@ public class BulletPoolManager : MonoBehaviour
     {
 
         Debug.Log("Ç®¿¡ ¹Ý³³µÊ");
+        bullet.transform.position = Vector3.zero;
+        bullet.transform.rotation = Quaternion.identity;
+
         bullet.SetActive(false);
 
     }
@@ -79,8 +80,4 @@ public class BulletPoolManager : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        
-    }
 }
