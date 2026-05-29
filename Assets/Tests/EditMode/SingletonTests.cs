@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 /// <summary>
 /// DataRegistry 싱글톤 NUnit 테스트 모음.

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 /// <summary>
 /// 싱글톤 패턴 예제 — 키-값(맵) 기반 전역 데이터 레지스트리.
