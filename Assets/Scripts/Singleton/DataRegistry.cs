@@ -60,17 +60,15 @@ public class DataRegistry
 
     // ─── 테스트 전용 ─────────────────────────────────────────────────────────
 
-#if UNITY_INCLUDE_TESTS
     /// <summary>
     /// [테스트 전용] 싱글톤 인스턴스를 null 로 초기화하여 다음 접근 시 새 인스턴스가
     /// 만들어지게 합니다. 프로덕션 코드에서는 호출하지 마세요.
     /// </summary>
-    internal static void ResetForTesting()
+    public static void ResetForTesting()
     {
         lock (_lock)
         {
             _instance = null;
         }
     }
-#endif
 }
